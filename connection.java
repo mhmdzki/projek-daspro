@@ -15,8 +15,8 @@ public class connection {
         int index = -1;
         for(int i = 0; i < size; i++){
             if(namaGuru[i].Username.equals(Username)){
-                 index = i;
-                 break;
+                index = i;
+                break;
             }
         }
         return index;
@@ -26,8 +26,8 @@ public class connection {
         int index = -1;
         for(int i = 0; i < size; i++){
             if(namaGuru[i].idnamaGuru == (id)){
-                 index = i;
-                 break;
+                index = i;
+                break;
             }
         }
         return index;
@@ -39,13 +39,18 @@ public class connection {
         namaGuru[index].gajipokok = gajipokok;
         namaGuru[index].lamajammengajar = lamajammengajar;
         namaGuru[index].tunjangan = tunjangan;
-      
+        
+        // Add this line to print a message
+        System.out.println("Gaji update for namaGuru with id: " + id);
     }
 
     // tampil daftar nama guru
     public void tampil() {
         for (int i=0; i< size; i++) {
             namaGuru[i].tampil();
+            
+            // Add this line to print a message
+            System.out.println("Printing data for namaGuru " + i);
         }
     }
 
@@ -53,9 +58,8 @@ public class connection {
     public void tampilDataTertentu(int id) {
         int index = cariIdNamaGuru(id);
         namaGuru[index].tampil();
+        
+        // Add this line to print a message
+        System.out.println("Printing data for namaGuru with id: " + id);
     }
- 
-} 
-
-
-
+}
