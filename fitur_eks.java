@@ -4,23 +4,23 @@ public class fitur_eks {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         
-        System.out.print("Masukkan jumlah guru : ");
-        int guru = sc.nextInt();
+        System.out.print("Masukkan jumlah guru Eksternal : ");
+        int jmlEks = sc.nextInt();
 
-        String temps[][] = new String[guru][3];
+        String lapEks[][] = new String[jmlEks][3];
 
-        for (int i = 0; i < temps.length; i++) {
-            System.out.println("Guru ke-" + (i+1));
-            for (int j = 0; j < temps[0].length; j++) {
+        for (int i = 0; i < lapEks.length; i++) {
+            System.out.println("Guru Eksternal ke-" + (i+1));
+            for (int j = 0; j < lapEks[0].length; j++) {
                 if (j == 0) {
                     System.out.print("Nama" + ": ");
-                    temps[i][j] = sc.next();
+                    lapEks[i][j] = sc.next();
                 } else if (j == 1) {
                     System.out.print("Posisi" + ": ");
-                    temps[i][j] = sc.next();
+                    lapEks[i][j] = sc.next();
                 } else {
                     System.out.print("Gaji" + ": ");
-                    temps[i][j] = sc.next();
+                    lapEks[i][j] = sc.next();
                 }
             }
             System.out.println();
@@ -34,9 +34,9 @@ public class fitur_eks {
         System.out.println("======================================");
         System.out.println();
 
-        for (int i = 0; i < temps.length; i++) {
-            System.out.println("Guru ke-" + (i+1) + ": ");
-            for (String out : temps[i]) {
+        for (int i = 0; i < lapEks.length; i++) {
+            System.out.println("Guru Eksternal ke-" + (i+1) + ": ");
+            for (String out : lapEks[i]) {
                 System.out.print(out + " \t - \t ");
             }
             System.out.println();
